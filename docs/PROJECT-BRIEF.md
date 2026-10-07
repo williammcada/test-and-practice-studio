@@ -1,3 +1,7 @@
+# Current curriculum scope
+
+See [Confirmed curriculum and packet scope](CURRICULUM-SCOPE.md). GradeCam-driven differentiated packets are Grade 5 only; the 331 custom outcomes belong only to that curriculum. Engine expansion includes all supplied courses. The 57 observed standards are a growing Q1 snapshot, not a fixed scope.
+
 # Test and Practice Studio — project brief
 
 ## Identity and baseline
