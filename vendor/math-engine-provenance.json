@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "749559fd6af5b152e293ba90c140299156e67c9f",
+  "commit": "06c2b8b97eea4488652b92973d86286350ca970a",
   "path": "src/course-banks.js",
-  "sha256": "3d9d406a137bf98808ebfe8348be92d6ef8f366e2649bbdb86f54f18f2fb2152",
-  "moduleVersion": "0.11.0-rc.2",
+  "sha256": "fd8f69ed25b4c161a46b605ba146b3b16d988f5e868afe0fbd2b9537a3917ead",
+  "moduleVersion": "0.11.0-rc.3",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -21,9 +21,9 @@
     "measurement-bank.js": "723755626a5647e5d431b588cbd3cf46c28a6d769535f216a7fb2ee6bae7c601",
     "statistics-bank-map.js": "253d6af26f250450650e2d7c864c45d237c9bfe906b295b99bb348ba2bab5208",
     "statistics-bank.js": "0084a5df0fcadf1793304874b46e645ec07e206a52ff636f2cf2a388c9a39dbd",
-    "geometry-svg.js": "e85c98e70be9844eef777911640bfb7a511e16e65bc8ea8be9f9b35e36d3645a",
+    "geometry-svg.js": "e6684a63b53d8e7e39b810664b1357eb54d36ac79e2c83f106432f1f9efd9fd4",
     "geometry-bank-map.js": "ed8a8980a8b0bb2f9d06fa5c72d9ceaeff7a960033678a43f37b277ae65c48b5",
     "geometry-bank.js": "5a22a190f7400f315447a36231ce93111460a4f2af06d2bd102d14966cac2646",
-    "course-banks.js": "3d9d406a137bf98808ebfe8348be92d6ef8f366e2649bbdb86f54f18f2fb2152"
+    "course-banks.js": "fd8f69ed25b4c161a46b605ba146b3b16d988f5e868afe0fbd2b9537a3917ead"
   }
 }
