@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "8d06877b1d0ece263b7bc075b30fe8560c8bcf14",
+  "commit": "a84a978ad46dfc8b1039ac0ab5fc28e84f30bf09",
   "path": "src/course-banks.js",
-  "sha256": "3407037986845477264217903a87b570716d972b39d0a4fdb7c8e211550770f4",
-  "moduleVersion": "0.20.0-rc.2",
+  "sha256": "ae95637b5969cf57d5be2c360bffbcde7d6c4526502a16c18632b72a7ca5ca63",
+  "moduleVersion": "0.21.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -45,14 +45,17 @@
     "algebra-review-bank.js": "c6a563b9727049c5c94f44d37cd1d8f76c486c36547db6fa838f21297dc02851",
     "foundations87-map.js": "7920a7dcd322dbc687381fe23aa7e779fb96c09008bf51983dbf7861eabcb8e5",
     "foundations87.js": "32d5002f6384dee18b314727c090e48dbebf1c7ac3cfcaa8a43286eb8cd68819",
-    "curriculum87-common.js": "cedc9f277f4581230e821fcd022c8006e1099d4fb82bd36f60bb2cec7aaa48e3",
+    "curriculum87-common.js": "22edd2bedd63ab3269468bc714a0efd4c58f6f5aefe8e707dbefe6358ea19d00",
     "curriculum87-early.js": "e94651a4568a6f76079e344d21a0ba1c9b6521a33be70c227b4d89b448e4c657",
     "curriculum87-middle.js": "c1d8585b3a3599412f081c5a24ce9daa87b7339e3549272452cad13cfc9a7ff7",
-    "curriculum87-late.js": "3211ee29d299898d835b86d0925525010b7dbc3f4f1e452b7c77bbdcd667d4e4",
+    "curriculum87-late.js": "7994c39ee7905b8f675981cbed5b63222c9eba9b5d74cf5bf14d187ecd9f0295",
     "curriculum87-investigations.js": "24f2a1256ecd641a302b9eae9719fde15321b2b6ffafee8460998d23e78b55ee",
     "curriculum87-extra.js": "274306c2d145438ca5a61a5584857ffb9e35f6628940450423097ea1460cc1cc",
     "curriculum87-map.js": "b80506d7022659c0e02c2d877e65b50c062de50b62e0b60116d99eb8417a7690",
-    "curriculum87.js": "bf2e85465c76c9ebb2f59d28af8d1d6dc7ec5f63f4d9c0accb31420efa54b5ec",
-    "course-banks.js": "3407037986845477264217903a87b570716d972b39d0a4fdb7c8e211550770f4"
+    "curriculum87-phase2.js": "447a52718bc928bbb5f71a834d523440d443f18ae851229a1a63b33017ecc4d9",
+    "curriculum87.js": "124e4eb11ea6d107a4e98cf812d46119386a461e348fd503895623ca0a5cebc2",
+    "curriculum87-assessment-map.js": "65b700fae769d273a7c71e447ddd4087e3954218c46bc8e133b1f97e8a08de52",
+    "curriculum87-assessment.js": "8a1b4410d93a939612534549a4f7af1dde6dd086955aef2d907ed2dc7b211203",
+    "course-banks.js": "ae95637b5969cf57d5be2c360bffbcde7d6c4526502a16c18632b72a7ca5ca63"
   }
 }
