@@ -1,7 +1,7 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "19d006c4a746c05d3fea472de1fc1d729593fb84",
+  "commit": "55b705f505c96421735751db9c0913da182f46f8",
   "path": "src/course-banks.js",
-  "sha256": "27231ef5c82afbf471c4ca89b1a7246afbcb5ef84952da4abc5914afea82791b",
-  "moduleVersion": "0.3.0-rc.1"
+  "sha256": "89580d1528b18380340931e558150a1602403b3834cd94495c05b2082bd0f7aa",
+  "moduleVersion": "0.3.1-rc.1"
 }

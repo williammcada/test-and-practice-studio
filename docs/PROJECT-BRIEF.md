@@ -1,3 +1,7 @@
+# Current candidate — v0.4.1-rc.1
+
+Eighteen source question entries support new number variants, including thirteen in 8/7. English-only catalog remains 5,425; 5,407 remain source previews. See [scope](change-specs/v0.4.1-early-87-expansion.md). Historical entries below record earlier states.
+
 # Current candidate — v0.4.0-rc.2
 
 Versioned English-only HTML delivery; see [change specification](change-specs/v0.4.0-rc.2-versioned-delivery.md). Handbook U-01 amendment: fd4330863f4cc0812180fbf1de122970a42c7885. Historical entries below record earlier states.
