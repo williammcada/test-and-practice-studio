@@ -1,18 +1,20 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "662b5c8975ee7b0212540b7aa8d53382b7c18131",
+  "commit": "ce760d23e61f0688334193eccf1e31f9ee8a7014",
   "path": "src/course-banks.js",
-  "sha256": "94276227c1817de34746c449e36cd4b69a46b17e9738e22059d6639e57468897",
-  "moduleVersion": "0.6.0-rc.1",
+  "sha256": "be3fa796e6cce2cb063a189175cbd64365168c8ffeb50728e3d9d53f68edf94c",
+  "moduleVersion": "0.7.0-rc.1",
   "files": {
-    "structured-math.js": "d76fd5628809712def7cf69d6be6794d0778e78f5fb49d775f91114d1236e245",
+    "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
     "structured-bank.js": "075320d71981a3e7ed9f167a4c2bfc466deb6f015b04bbe585f16e2ff5d47f63",
-    "linear-bank-map.js": "74d3e3456d96fc824b7400ebfdb9e02638665af345caab64bb0fb2e413881e6e",
-    "linear-equations.js": "ad1da51a8e8d792acd6545f1e93e07b728a4e30ea4966e93f9a5faf4f2e3d3de",
+    "linear-bank-map.js": "91d420894c42127cb34e783543e199cd11d0130393c2e5a50ff953c3a8635496",
+    "linear-equations.js": "3d896aa51221cd2cacbf347e1389afb55284f00aac7b635526b27b0a6c8a31d6",
     "quadratic-math.js": "6a01325b54d0b3126bd8309b1598b28f23bd6a4e5f6de53cd3aa3b23b42b80cb",
     "quadratic-bank-map.js": "378ecae4e6be7720b5094df01423676610cea30a84516fe6a28b5ed36d682df8",
     "quadratic-bank.js": "6f0e85138f7c98888bbbc428f9166871a9849070dd24b73f57f8a25c1b10ac2d",
-    "course-banks.js": "94276227c1817de34746c449e36cd4b69a46b17e9738e22059d6639e57468897"
+    "domain-bank-map.js": "02a9c8b3738b69335304318216ca35f008d679e398b442f3cc3e3ada010c269e",
+    "domain-bank.js": "0db728cb2c45f8f847893142060598a6d2be7ecb1281c7a1fd2ff61573b42467",
+    "course-banks.js": "be3fa796e6cce2cb063a189175cbd64365168c8ffeb50728e3d9d53f68edf94c"
   }
 }
