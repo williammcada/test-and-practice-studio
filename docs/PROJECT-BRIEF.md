@@ -1,3 +1,7 @@
+# Current candidate — v0.4.0-rc.2
+
+Versioned English-only HTML delivery; see [change specification](change-specs/v0.4.0-rc.2-versioned-delivery.md). Handbook U-01 amendment: fd4330863f4cc0812180fbf1de122970a42c7885. Historical entries below record earlier states.
+
 # English-only banks with live Math Engine integration — v0.4.0-rc.1
 
 Spanish is removed from active scope and imports. Six English banks contain 5,425 source records. Six explicitly mapped source questions now generate original source-informed variants using the pinned canonical MATH-ENGINE module. Use Engine-ready questions only to find them. The other 5,419 remain source previews; full bank integration is unfinished. Seed/index save in version 2 drafts; English version 1 drafts migrate with defaults, Spanish selections reject without losing current work. See [specification](change-specs/v0.4-english-engine-integration.md). No standards prerequisite, print or export release. Handbook remains 8fc5e3b6cd163278dd618081333f2264bf392db6. Implementation checkpoint awaiting checks.

@@ -1,6 +1,6 @@
 """Deterministically bundle the metadata review UI; no publisher question bodies."""
 import pathlib,json,hashlib,gzip,base64
-root=pathlib.Path(__file__).resolve().parents[1];pin=json.loads((root/'vendor/math-engine-provenance.json').read_text());assert hashlib.sha256((root/'vendor/course-banks.js').read_bytes()).hexdigest()==pin['sha256'];base=root/'data/course-banks/v0.1';catalog=json.loads((base/'catalog.json').read_text());result={'version':'0.4.0-rc.1','catalog':'course-index-0.1+recovery-0.2','banks':[],'contentHashes':json.loads((root/'data/recovery/v0.2/content-hashes.json').read_text())}
+root=pathlib.Path(__file__).resolve().parents[1];pin=json.loads((root/'vendor/math-engine-provenance.json').read_text());assert hashlib.sha256((root/'vendor/course-banks.js').read_bytes()).hexdigest()==pin['sha256'];base=root/'data/course-banks/v0.1';catalog=json.loads((base/'catalog.json').read_text());version=json.loads((root/'package.json').read_text())['version'];assert ("VERSION='"+version+"'") in (root/'src/core.js').read_text();result={'version':version,'catalog':'course-index-0.1+recovery-0.2','banks':[],'contentHashes':json.loads((root/'data/recovery/v0.2/content-hashes.json').read_text())}
 for entry in catalog['banks']:
  assert entry['language']=='en'
  p=base/entry['path'];assert hashlib.sha256(p.read_bytes()).hexdigest()==entry['sha256'];d=json.loads(p.read_text());lessons={l['id']:dict(l) for l in d['lessons']};items={i['id']:dict(i) for i in d['items']};overlay=root/'data/recovery/v0.2'/(d['id']+'-links.json')
@@ -26,4 +26,4 @@ for entry in catalog['banks']:
 assert sum(len(b['items']) for b in result['banks'])==5425
 packed=base64.b64encode(gzip.compress(json.dumps(result,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)).decode();html=(root/'src/index.template.html').read_text()
 for token,path in [('/*STYLES*/','studio.css'),('/*CORE*/','core.js'),('/*APP*/','app.js'),('/*ENGINE*/','../vendor/course-banks.js')]:html=html.replace(token,(root/'src'/path).read_text())
-html=html.replace('/*CATALOG*/',packed);(root/'index.html').write_text(html);print('Built index.html:',len(html.encode()),'bytes; 5,425 items')
+html=html.replace('/*CATALOG*/',packed).replace('/*VERSION*/',version);assert ('<title>Test and Practice Studio v'+version) in html;assert ('class="version">v'+version) in html;(root/'index.html').write_text(html);delivery=root/'downloads'/('Test-and-Practice-Studio-v'+version+'.html');delivery.parent.mkdir(exist_ok=True);assert not delivery.exists() or delivery.read_bytes()==html.encode(), 'Changed HTML must use a new version';delivery.write_text(html);print('Built index.html:',len(html.encode()),'bytes; 5,425 items')
