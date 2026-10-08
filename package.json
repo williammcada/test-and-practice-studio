@@ -1,6 +1,6 @@
 {
   "name": "test-and-practice-studio",
-  "version": "0.20.0-rc.2",
+  "version": "0.21.0-rc.1",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build-studio.py",

@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "219d13b547d5c40c8594565306ee102e38908408",
+  "commit": "4b580b5ca96ecf8e0776656e4e6597f933f93ca4",
   "path": "src/course-banks.js",
-  "sha256": "0b59e647fe188abff3551e1a3df0b9f85c4ed2fe5a3fc46d8b9cb1519e2b45fe",
-  "moduleVersion": "0.19.0-rc.2",
+  "sha256": "3c41597cecdba819859904032b3a7afc1aec34395ea125cd36479098c54362b7",
+  "moduleVersion": "0.20.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -45,6 +45,14 @@
     "algebra-review-bank.js": "c6a563b9727049c5c94f44d37cd1d8f76c486c36547db6fa838f21297dc02851",
     "foundations87-map.js": "7920a7dcd322dbc687381fe23aa7e779fb96c09008bf51983dbf7861eabcb8e5",
     "foundations87.js": "32d5002f6384dee18b314727c090e48dbebf1c7ac3cfcaa8a43286eb8cd68819",
-    "course-banks.js": "0b59e647fe188abff3551e1a3df0b9f85c4ed2fe5a3fc46d8b9cb1519e2b45fe"
+    "curriculum87-common.js": "2546a365ea4058ae61de421dbefc28c88a0ca0e7b44bb2eb139dacc089943492",
+    "curriculum87-early.js": "e94651a4568a6f76079e344d21a0ba1c9b6521a33be70c227b4d89b448e4c657",
+    "curriculum87-middle.js": "c1d8585b3a3599412f081c5a24ce9daa87b7339e3549272452cad13cfc9a7ff7",
+    "curriculum87-late.js": "3211ee29d299898d835b86d0925525010b7dbc3f4f1e452b7c77bbdcd667d4e4",
+    "curriculum87-investigations.js": "24f2a1256ecd641a302b9eae9719fde15321b2b6ffafee8460998d23e78b55ee",
+    "curriculum87-extra.js": "274306c2d145438ca5a61a5584857ffb9e35f6628940450423097ea1460cc1cc",
+    "curriculum87-map.js": "b80506d7022659c0e02c2d877e65b50c062de50b62e0b60116d99eb8417a7690",
+    "curriculum87.js": "bf2e85465c76c9ebb2f59d28af8d1d6dc7ec5f63f4d9c0accb31420efa54b5ec",
+    "course-banks.js": "3c41597cecdba819859904032b3a7afc1aec34395ea125cd36479098c54362b7"
   }
 }
