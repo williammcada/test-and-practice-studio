@@ -1,11 +1,12 @@
 {
   "name": "test-and-practice-studio",
-  "version": "0.21.0-rc.1",
+  "version": "0.21.0-rc.2",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build-studio.py",
     "test": "node tests/studio-core.cjs",
-    "test:browser": "node tests/studio-browser.cjs"
+    "test:browser": "node tests/studio-browser.cjs",
+    "test:curriculum87": "node tests/curriculum87-delivery.cjs && node tests/curriculum87-layout.cjs"
   },
   "description": "Manual course-bank selection and source review; content verification remains in progress"
 }
