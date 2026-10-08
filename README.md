@@ -21,4 +21,4 @@ Build with `python3 scripts/build-studio.py`. Test with `npm test`; the browser 
 - [GradeCam import findings](docs/GRADECAM-IMPORT-FINDINGS.md)
 
 Canonical repository: https://github.com/williammcada/test-and-practice-studio.
-No deployment is claimed. This is an implementation checkpoint pending recorded verification, not a complete application release.
+No deployment is claimed. The exact implementation checkpoint passed the [recorded teacher-review checks](docs/STUDIO-REVIEW-VERIFICATION.md). It is not a complete application release.

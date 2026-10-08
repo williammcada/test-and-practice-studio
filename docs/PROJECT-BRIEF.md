@@ -1,6 +1,6 @@
 # Manual bank browser — v0.3.0-rc.1 implementation checkpoint
 
-Runnable standalone index.html now supports all eight course/language banks, lesson/search filters, individual and lesson selection, ordered drafts, JSON draft save/open, group removal/clear/undo, and local recovered-content inspection. See [change specification](change-specs/v0.3-manual-bank-review.md). Source previews explicitly remain incomplete; no print-ready question, variant generator or Word/PDF export is claimed. No browser/cloud persistence or deployment. Download drafts before closing. Handbook refreshed to 8fc5e3b6cd163278dd618081333f2264bf392db6.
+The exact candidate passed the [recorded desktop and standalone checks](STUDIO-REVIEW-VERIFICATION.md). Runnable standalone index.html now supports all eight course/language banks, lesson/search filters, individual and lesson selection, ordered drafts, JSON draft save/open, group removal/clear/undo, and local recovered-content inspection. See [change specification](change-specs/v0.3-manual-bank-review.md). Source previews explicitly remain incomplete; no print-ready question, variant generator or Word/PDF export is claimed. No browser/cloud persistence or deployment. Download drafts before closing. Handbook refreshed to 8fc5e3b6cd163278dd618081333f2264bf392db6.
 
 # Bank content recovery — v0.2 implementation checkpoint
 
