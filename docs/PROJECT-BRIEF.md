@@ -1,3 +1,7 @@
+# Course bank metadata — v0.1 implementation checkpoint
+
+Step 1 imports six courses / eight language banks with 8,166 question records. See [catalog](../data/course-banks/v0.1/README.md) and [change specification](change-specs/v0.1-course-index-import.md). This is metadata only; question recovery, selection UI and exports remain pending. Handbook refreshed to 14ab24e3e55928a5d37e567283f0edb9172a2ce6 (AI-START-HERE, UNIVERSAL-RULES and CONDITIONAL-STANDARDS); applicable scope recorded in the specification.
+
 # Manual banks — confirmed requirement, 2026-10-08
 
 All supplied courses must be available as selectable banks for teacher-built tests and practice by lesson and question. Missing standards must not gate this workflow. Only standards-driven differentiation remains Grade 5 restricted. See [manual bank specification](change-specs/manual-course-banks.md) for source readiness and acceptance criteria.
