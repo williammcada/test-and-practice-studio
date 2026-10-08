@@ -33,7 +33,7 @@ def main():
   assert len(items)==len(idx['items']);save(a.output/(cid+'.json'),{'id':cid,'source':source,'items':items,'bank_resources':assets})
   summary['courses'].append({'id':cid,'items':len(items),'question_block_records':sum(bool(i['question_block_indices']) for i in items),'answer_block_records':sum(bool(i['answer_block_indices']) for i in items),'answer_or_choice_records':sum(bool(i['answer_block_indices'] or i['other_answer_block_indices']) for i in items),'choice_only_key_unverified':sum(not i['answer_block_indices'] for i in items),'script_records':sum(any(i['blocks'][j]['text'] for j in i['script_block_indices']) for i in items),'rich_object_records':sum(any(v['format']==1 for v in i['blocks']) for i in items),'binary_bank_resources':sum(x['kind']!=1 for x in assets),'source_sha256':source['sha256']})
  inv=json.loads((a.source_root/'ExamView-Extraction/bank-inventory.json').read_text())
- for cid in ['course-1-en','course-1-es','intermediate-4-en','intermediate-4-es']:
+ for cid in ['course-1-en','intermediate-4-en']:
   idx=json.loads((a.indexes/(cid+'.json')).read_text());outitems=[];newlessons={};updates=[];stats=collections.Counter();sources=[]
   for bank in idx['source_banks']:
    path=a.source_root/'ExamView-Extraction/original-banks'/bank['source_path'];raw=path.read_bytes();assert sha(raw)==bank['sha256'];b=zlib.decompress(raw[16:]);source={'bank_id':bank['id'],'path':bank['source_path'],'sha256':sha(raw),'decompressed_sha256':sha(b)};sources.append(source);dest=a.output/'originals'/cid/path.name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(raw)

@@ -1,24 +1,13 @@
-# Test and Practice Studio
+# Test and Practice Studio — v0.4.0-rc.1
 
 A WILLIAM MCADA PRODUCT
 
-## v0.3.0-rc.1 — manual bank review
+Download index.html using GitHub's Download raw file button, then open it in Chrome or Edge. Six English course banks contain 5,425 records. Spanish has been removed from the active catalog and loader.
 
-Download [index.html](index.html) using GitHub's **Download raw file** button, then open the downloaded file in Chrome or Edge. It is a standalone teacher-review build with all 8,166 metadata records embedded; no server or internet connection is required after download. Supported test target: desktop Chromium. Physical iPad/iPhone and hosted delivery are not yet verified.
+Select **Engine-ready questions only** to use six source-informed generator families, one per course. Their live previews need no recovered-content upload. Choose a seed, request the next variant, try an answer, or open the teacher solution. Math Engine owns these generators; Studio pins its canonical source commit in vendor/math-engine-provenance.json. These are explicitly labeled original adaptations, not exact legacy reconstructions.
 
-1. Choose a course/language and lesson, or search by question ID or lesson title.
-2. Select individual questions or add a lesson. Selections stay when switching banks.
-3. To inspect source wording, extract the retained Course-Bank-Content-Recovery-v0.2.zip and use **Load recovered content** to select its course/language JSON files. Files stay on your device and must match the pinned recovery checkpoint.
-4. Reorder/remove questions, name the draft and choose Practice/Test. **Download draft** preserves the selection for **Open draft** later. The page does not persist drafts after closing.
+The other 5,419 records retain incomplete source previews. To inspect them, extract Course-Bank-Content-Recovery-v0.2.zip and load only its English course JSON files. No files are uploaded. Historical recovery archives still contain their original sources; Spanish entries cannot be loaded into this build.
 
-Incomplete source previews are teacher evidence only. Equations, diagrams, formatting and dynamic variants remain unresolved. Teacher answers are separate and collapsed by default. Student output/printing and Word/PDF generation are unavailable. No standards mapping or GradeCam import is needed for manual selection; GradeCam differentiation remains Grade 5 only.
+Select lessons/questions, reorder and download a draft. Version 2 drafts preserve seed and variant indices. Old English drafts migrate; Spanish selections are rejected without losing current work. There is no browser/cloud persistence; download before closing. Student-ready print, Word/PDF and GradeCam differentiation remain pending. Manual selection needs no standards codes.
 
-Build with `python3 scripts/build-studio.py`. Test with `npm test`; the browser test requires Playwright and a Chromium executable (see tests/studio-browser.cjs). The build includes metadata and source file hashes only, never the private recovered question bodies. Math Engine remains a separate repository and is unchanged in this increment.
-
-- [Project brief](docs/PROJECT-BRIEF.md)
-- [Current change specification](docs/change-specs/v0.3-manual-bank-review.md)
-- [Recovery limitations](data/recovery/v0.2/README.md)
-- [GradeCam import findings](docs/GRADECAM-IMPORT-FINDINGS.md)
-
-Canonical repository: https://github.com/williammcada/test-and-practice-studio.
-No deployment is claimed. The exact implementation checkpoint passed the [recorded teacher-review checks](docs/STUDIO-REVIEW-VERIFICATION.md). It is not a complete application release.
+Build: python3 scripts/build-studio.py. Checks: npm test, tests/studio-browser.cjs, tests/engine-integration.cjs. Desktop Chromium is the initial verification target; no hosted or physical-device verification is claimed. This is an implementation checkpoint, not a full-bank release.

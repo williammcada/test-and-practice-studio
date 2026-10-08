@@ -1,1 +1,77 @@
-{"version":"0.2.0","scope":"binary/text recovery; no rendering or mathematical certification","courses":[{"id":"course-87-en","items":789,"question_block_records":789,"answer_block_records":602,"answer_or_choice_records":789,"choice_only_key_unverified":187,"script_records":789,"rich_object_records":772,"binary_bank_resources":50,"source_sha256":"c3fc586e8fa0378836ec0bf92223c157cc5d52e71cc4bbabcdb0164b5b35303c"},{"id":"algebra-1-en","items":679,"question_block_records":679,"answer_block_records":478,"answer_or_choice_records":679,"choice_only_key_unverified":201,"script_records":674,"rich_object_records":285,"binary_bank_resources":0,"source_sha256":"d299705537d1fa52c8976ffd673f281dcdc5593a5010a1804d3e0213432f851c"},{"id":"algebra-2-en","items":592,"question_block_records":592,"answer_block_records":365,"answer_or_choice_records":592,"choice_only_key_unverified":227,"script_records":559,"rich_object_records":565,"binary_bank_resources":61,"source_sha256":"bfefbf52856487bba687589ac19a339e65bf9d48db64122b7879ea743257cc3d"},{"id":"algebra-half-en","items":624,"question_block_records":624,"answer_block_records":402,"answer_or_choice_records":624,"choice_only_key_unverified":222,"script_records":622,"rich_object_records":623,"binary_bank_resources":26,"source_sha256":"979283de342f4fe764097fbb673d16bbfbb4a14c1cd42ca1196526dc0d21d57c"},{"id":"course-1-en","items":1353,"linked_answers":1353,"new_lesson_labels":1,"multiple_choice":608,"dynamic_records":589,"question_object_markers":1009,"new_lesson_link_records":13,"free_response":745},{"id":"course-1-es","items":1353,"linked_answers":1353,"new_lesson_labels":1,"multiple_choice":608,"dynamic_records":589,"question_object_markers":1009,"new_lesson_link_records":13,"free_response":745},{"id":"intermediate-4-en","items":1388,"linked_answers":1388,"new_lesson_labels":4,"multiple_choice":642,"dynamic_records":571,"question_object_markers":973,"new_lesson_link_records":24,"free_response":746},{"id":"intermediate-4-es","items":1388,"linked_answers":1388,"new_lesson_labels":4,"multiple_choice":641,"dynamic_records":571,"question_object_markers":973,"new_lesson_link_records":24,"free_response":747}],"ready_for_generation":0}
+{
+  "version": "0.2.0",
+  "scope": "binary/text recovery; no rendering or mathematical certification",
+  "courses": [
+    {
+      "id": "course-87-en",
+      "items": 789,
+      "question_block_records": 789,
+      "answer_block_records": 602,
+      "answer_or_choice_records": 789,
+      "choice_only_key_unverified": 187,
+      "script_records": 789,
+      "rich_object_records": 772,
+      "binary_bank_resources": 50,
+      "source_sha256": "c3fc586e8fa0378836ec0bf92223c157cc5d52e71cc4bbabcdb0164b5b35303c"
+    },
+    {
+      "id": "algebra-1-en",
+      "items": 679,
+      "question_block_records": 679,
+      "answer_block_records": 478,
+      "answer_or_choice_records": 679,
+      "choice_only_key_unverified": 201,
+      "script_records": 674,
+      "rich_object_records": 285,
+      "binary_bank_resources": 0,
+      "source_sha256": "d299705537d1fa52c8976ffd673f281dcdc5593a5010a1804d3e0213432f851c"
+    },
+    {
+      "id": "algebra-2-en",
+      "items": 592,
+      "question_block_records": 592,
+      "answer_block_records": 365,
+      "answer_or_choice_records": 592,
+      "choice_only_key_unverified": 227,
+      "script_records": 559,
+      "rich_object_records": 565,
+      "binary_bank_resources": 61,
+      "source_sha256": "bfefbf52856487bba687589ac19a339e65bf9d48db64122b7879ea743257cc3d"
+    },
+    {
+      "id": "algebra-half-en",
+      "items": 624,
+      "question_block_records": 624,
+      "answer_block_records": 402,
+      "answer_or_choice_records": 624,
+      "choice_only_key_unverified": 222,
+      "script_records": 622,
+      "rich_object_records": 623,
+      "binary_bank_resources": 26,
+      "source_sha256": "979283de342f4fe764097fbb673d16bbfbb4a14c1cd42ca1196526dc0d21d57c"
+    },
+    {
+      "id": "course-1-en",
+      "items": 1353,
+      "linked_answers": 1353,
+      "new_lesson_labels": 1,
+      "multiple_choice": 608,
+      "dynamic_records": 589,
+      "question_object_markers": 1009,
+      "new_lesson_link_records": 13,
+      "free_response": 745
+    },
+    {
+      "id": "intermediate-4-en",
+      "items": 1388,
+      "linked_answers": 1388,
+      "new_lesson_labels": 4,
+      "multiple_choice": 642,
+      "dynamic_records": 571,
+      "question_object_markers": 973,
+      "new_lesson_link_records": 24,
+      "free_response": 746
+    }
+  ],
+  "ready_for_generation": 0
+}

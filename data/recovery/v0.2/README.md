@@ -1,3 +1,7 @@
+# English-only active scope — 2026-10-08
+
+Spanish banks are removed from the active catalog, recovery overlays and content loader. Six English banks contain 5,425 records. Older counts below describe the archived extraction checkpoint and do not describe the current selection scope. Raw supplied archives and Git history remain intact.
+
 # Bank content recovery v0.2
 
 This metadata-only overlay accompanies the retained Course-Bank-Content-Recovery-v0.2.zip. It supplements data/course-banks/v0.1; the original checkpoint is immutable.

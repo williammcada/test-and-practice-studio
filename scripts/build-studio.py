@@ -1,7 +1,8 @@
 """Deterministically bundle the metadata review UI; no publisher question bodies."""
 import pathlib,json,hashlib,gzip,base64
-root=pathlib.Path(__file__).resolve().parents[1];base=root/'data/course-banks/v0.1';catalog=json.loads((base/'catalog.json').read_text());result={'version':'0.3.0-rc.1','catalog':'course-index-0.1+recovery-0.2','banks':[],'contentHashes':json.loads((root/'data/recovery/v0.2/content-hashes.json').read_text())}
+root=pathlib.Path(__file__).resolve().parents[1];pin=json.loads((root/'vendor/math-engine-provenance.json').read_text());assert hashlib.sha256((root/'vendor/course-banks.js').read_bytes()).hexdigest()==pin['sha256'];base=root/'data/course-banks/v0.1';catalog=json.loads((base/'catalog.json').read_text());result={'version':'0.4.0-rc.1','catalog':'course-index-0.1+recovery-0.2','banks':[],'contentHashes':json.loads((root/'data/recovery/v0.2/content-hashes.json').read_text())}
 for entry in catalog['banks']:
+ assert entry['language']=='en'
  p=base/entry['path'];assert hashlib.sha256(p.read_bytes()).hexdigest()==entry['sha256'];d=json.loads(p.read_text());lessons={l['id']:dict(l) for l in d['lessons']};items={i['id']:dict(i) for i in d['items']};overlay=root/'data/recovery/v0.2'/(d['id']+'-links.json')
  if overlay.exists():
   o=json.loads(overlay.read_text());assert o['id']==d['id'] and len(o['items'])==len(items)
@@ -22,7 +23,7 @@ for entry in catalog['banks']:
  import re
  newlessons.sort(key=lambda l:[int(x) if x.isdigit() else x.lower() for x in re.split(r'(\d+)',l['display'])])
  result['banks'].append({'id':d['id'],'display':names[d['course_id']]+' · '+('English' if d['language']=='en' else 'Spanish'),'lessons':newlessons,'items':newitems})
-assert sum(len(b['items']) for b in result['banks'])==8166
+assert sum(len(b['items']) for b in result['banks'])==5425
 packed=base64.b64encode(gzip.compress(json.dumps(result,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)).decode();html=(root/'src/index.template.html').read_text()
-for token,path in [('/*STYLES*/','studio.css'),('/*CORE*/','core.js'),('/*APP*/','app.js')]:html=html.replace(token,(root/'src'/path).read_text())
-html=html.replace('/*CATALOG*/',packed);(root/'index.html').write_text(html);print('Built index.html:',len(html.encode()),'bytes; 8,166 items')
+for token,path in [('/*STYLES*/','studio.css'),('/*CORE*/','core.js'),('/*APP*/','app.js'),('/*ENGINE*/','../vendor/course-banks.js')]:html=html.replace(token,(root/'src'/path).read_text())
+html=html.replace('/*CATALOG*/',packed);(root/'index.html').write_text(html);print('Built index.html:',len(html.encode()),'bytes; 5,425 items')

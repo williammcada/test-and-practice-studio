@@ -1,3 +1,7 @@
+# English-only active scope — 2026-10-08
+
+Spanish banks are removed from the active catalog, recovery overlays and content loader. Six English banks contain 5,425 records. Older counts below describe the archived extraction checkpoint and do not describe the current selection scope. Raw supplied archives and Git history remain intact.
+
 # Course bank index v0.1
 
 Metadata import for six supplied courses, eight language banks, 1,044 lesson/scope records and 8,166 question records. Language editions count separately; these totals are not counts of distinct mathematical families. Includes 52 source banks: four recovered generator courses and 48 ExamView files.

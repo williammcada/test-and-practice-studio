@@ -12,7 +12,7 @@ for p in root.glob('*-en.json'):
    raw=base64.b64decode(v['raw_base64'],validate=True);assert raw==b[v['source_offset']:v['source_offset']+v['length']] and sha(raw)==v['sha256'];blocks+=1
  for r in d['bank_resources']:
   raw=base64.b64decode(r['raw_base64'],validate=True);off=r['source_offset'];assert raw==b[off+4:off+4+r['length']] and sha(raw)==r['sha256'];resources+=1
-for cid in ['course-1-en','course-1-es','intermediate-4-en','intermediate-4-es']:
+for cid in ['course-1-en','intermediate-4-en']:
  d=json.loads((root/(cid+'.json')).read_text());idx=json.loads((a.indexes/(cid+'.json')).read_text());assert {i['id'] for i in idx['items']}=={i['id'] for i in d['items']};banks={}
  for s in d['sources']:
   raw=(root/'originals'/cid/pathlib.Path(s['path']).name).read_bytes();assert sha(raw)==s['sha256'];b=zlib.decompress(raw[16:]);assert sha(b)==s['decompressed_sha256'];banks[s['bank_id']]=b
@@ -23,7 +23,7 @@ for cid in ['course-1-en','course-1-es','intermediate-4-en','intermediate-4-es']
    mc+=1;labels={c['label'] for c in i['choices_in_source_layout_order']};assert answer['label'] in labels;assert chr(97+struct.unpack_from('<I',b,answer['source_index_offset'])[0])==answer['label']
   else:
    fr+=1;t=answer['text_with_controls'];off=answer['source_text_offset'];assert b[off:off+len(t.encode('utf-16le'))].decode('utf-16le')==t
-assert (count,mc,fr)==(8166,2499,2983)
+assert (count,mc,fr)==(5425,1250,1491)
 # Independently solved fixed examples, not general correctness certification.
 d=json.loads((root/'course-1-en.json').read_text());answers={i['source_id']:i['answer']['text_with_controls'] for i in d['items']}
 expected={'C1_S01_00085':str(320//4),'C1_S01_00086':'miles','C1_S01_00088':'2 m','C1_S01_00090':str(64//4)+' cm','C1_S01_00091':str(8*8),'C1_S01_00092':'4321','C1_S01_00093':str(3675+285+1308),'C1_S01_00094':'$'+format((500-285)/100,'.2f'),'C1_S01_00095':str(3*12-1)}

@@ -8,7 +8,7 @@ def write(p,x):p.write_text(json.dumps(x,ensure_ascii=False,separators=(',',':')
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--source-root',type=pathlib.Path,required=True);ap.add_argument('--output',type=pathlib.Path,required=True);a=ap.parse_args();root=a.source_root;out=a.output;out.mkdir(parents=True,exist_ok=True)
  readiness={'metadata_indexed':True,'prompt_decoded':'not_imported','math_diagram_rendered':'not_verified','answer_linked':'not_imported','generator_implemented':False,'verified_for_use':False}
- catalog={'schema_version':'0.1.0','scope':'metadata only','courses':[],'banks':[],'readiness_defaults':readiness,'standards_required_for_manual_selection':False,'sources':[]}
+ catalog={'schema_version':'0.1.1','scope':'metadata only','courses':[],'banks':[],'readiness_defaults':readiness,'standards_required_for_manual_selection':False,'sources':[]}
  def source(p):
   rec={'path':str(p.relative_to(root)),'sha256':digest(p)};catalog['sources'].append(rec);return rec
  def add(cid,name,language,banks,lessons,items,edition=None,grade=None):
@@ -35,7 +35,7 @@ def main():
   add(cid,c['course'],'en',[{'id':bid+':source','source':zs,'member':member}],lessons,items,raw['edition'])
  ep=root/'ExamView-Extraction';invp=ep/'bank-inventory.json';source(invp);inventory=json.loads(invp.read_text());ip=ep/'item-id-index.csv';source(ip);rows=list(csv.DictReader(ip.open()));lp=ep/'lesson-index.csv';source(lp);lrows=list(csv.DictReader(lp.open()))
  for cid,name,match in [('course-1','Course 1','Course 1'),('intermediate-4','Intermediate 4','Int4')]:
-  for language,folder in [('en','English'),('es','Spanish')]:
+  for language,folder in [('en','English')]:
    bid=cid+'-'+language;banks=[];lessons=[];items=[]
    for b in inventory:
     path=b['bank']
