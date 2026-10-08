@@ -1,0 +1,329 @@
+{
+  "source": "Tester.exe",
+  "sha256": "700b6e53182d680f91e98b8e3a9e68d7de2573f52c32413128b9454dc3286476",
+  "bytes": 2400256,
+  "method": "Exact UTF-16LE string matching; executable not run",
+  "observed_labels": [
+    {
+      "label": "&Add Selected Items",
+      "byte_offsets": [
+        2140164
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Add &Multiple Items...",
+      "byte_offsets": [
+        2140216
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Add &Random Items...",
+      "byte_offsets": [
+        2140266
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Select New &Values",
+      "byte_offsets": [
+        2140724
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Shuffle Settings...",
+      "byte_offsets": [
+        2140766
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Shuffle &questions",
+      "byte_offsets": [
+        2165690
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Shuffle &answers",
+      "byte_offsets": [
+        2165754
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Shuffle &distractors",
+      "byte_offsets": [
+        2165814
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Multiple Choice",
+      "byte_offsets": [
+        2145342,
+        2156722
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Free Response",
+      "byte_offsets": [
+        2145402,
+        2156666
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Number of Forms:",
+      "byte_offsets": [
+        2159170
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "First form number:",
+      "byte_offsets": [
+        2159270
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Number of Columns:",
+      "byte_offsets": [
+        2155098,
+        2176496
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Mirrored Margins",
+      "byte_offsets": [
+        2176596
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Answer Blank Placement",
+      "byte_offsets": [
+        2177152
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Separate Sheet",
+      "byte_offsets": [
+        2177228
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Answer Next to Question",
+      "byte_offsets": [
+        2177288
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Distractor Placement",
+      "byte_offsets": [
+        2177368,
+        2178632
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Orphan Control",
+      "byte_offsets": [
+        2177520,
+        2178784
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Instructions Placement",
+      "byte_offsets": [
+        2177660
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Vertical Lines",
+      "byte_offsets": [
+        2177852
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Horizontal Lines",
+      "byte_offsets": [
+        2177912
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Header/Footer",
+      "byte_offsets": [
+        2140410,
+        2179000,
+        2187316
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "First page",
+      "byte_offsets": [
+        2179458
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Subsequent pages",
+      "byte_offsets": [
+        2179506
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Apply to entire worksheet",
+      "byte_offsets": [
+        2179566
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Apply until next section break",
+      "byte_offsets": [
+        2179642
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Keep With Next",
+      "byte_offsets": [
+        2157798
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Always the same",
+      "byte_offsets": [
+        2159810
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Match partial words",
+      "byte_offsets": [
+        2156458
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Static",
+      "byte_offsets": [
+        2145666,
+        2156782,
+        2165650
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Dynamic",
+      "byte_offsets": [
+        2156822
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Annotation...",
+      "byte_offsets": [
+        2140448
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Section &Break",
+      "byte_offsets": [
+        2140518
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Optional Break",
+      "byte_offsets": [
+        2140552
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "&Standard Styles...",
+      "byte_offsets": [
+        2139884
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Create &New Item...",
+      "byte_offsets": [
+        2140114
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Insert Equation...",
+      "byte_offsets": [
+        2141360
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    },
+    {
+      "label": "Insert Plot...",
+      "byte_offsets": [
+        2141440
+      ],
+      "encoding": "UTF-16LE",
+      "evidence": "embedded text; runtime behavior and defaults unverified"
+    }
+  ]
+}
