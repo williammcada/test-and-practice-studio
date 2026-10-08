@@ -27,7 +27,7 @@ def main():
   if rownum<4 or r[0] is None:continue
   lid='course-87-en:scope:'+str(r[0]);lookup[r[3]]=lid;lessons.append({'id':lid,'source_number':r[2],'kind':r[1],'label':r[3],'title':r[5],'source_row':rownum})
  items=[{'id':'course-87-en:item:'+i['source_id'],'source_id':i['source_id'],'lesson_id':lookup[i['scope_label']],'source_row':i['workbook_row'],'script_present':i['has_script']} for i in d['items']]
- add('course-87','8/7','en',[{'id':'course-87-en:source','source':ws,'item_sheet':d['source_sheet'],'lesson_sheet':'Lesson Scope'}],lessons,items,grade=5)
+ add('course-87','Introduction to PreAlgebra (8/7)','en',[{'id':'course-87-en:source','source':ws,'item_sheet':d['source_sheet'],'lesson_sheet':'Lesson Scope'}],lessons,items,grade=5)
  apath=root/'scope-checkpoint/algebra-source-index.json';source(apath);ai=json.loads(apath.read_text());zp=root/'source-recovery/NEW SAXON TEST & PRACTICE GENERATOR/Saxon_Algebra_Content_Recovery.zip';zs=source(zp);assert zs['sha256']==ai['source_sha256'];z=zipfile.ZipFile(zp)
  for c in ai['courses']:
   key={'Algebra 1':'algebra1','Algebra 2':'algebra2','Algebra 1/2':'algebra_half'}[c['course']];cid={'algebra1':'algebra-1','algebra2':'algebra-2','algebra_half':'algebra-half'}[key];bid=cid+'-en';member='Saxon_Algebra_Content_Recovery/'+key+'/content.json';raw=json.loads(z.read(member));lessons=[{'id':bid+':scope:'+str(l['number']),'source_number':l['number'],'title':l['title'],'source_item_count':l['item_count']} for l in raw['lessons']]

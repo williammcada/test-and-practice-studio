@@ -1,3 +1,7 @@
+# Current candidate — v0.6.0-rc.1
+
+Course 8/7 is now **Introduction to PreAlgebra (8/7)** with unchanged IDs and Grade 5 designation. Added 29 reviewed linear-equation adaptations: 15 Algebra 1 and 14 Algebra 1/2. 147 working entries; 5,278 remain unintegrated. Exact affine solving and MathML share the Engine implementation. Handbook fd4330863f4cc0812180fbf1de122970a42c7885. Implementation awaiting verification; no release or deployment. Historical entries follow.
+
 # Current candidate — v0.5.0-rc.1
 
 Shared exact arithmetic and MathML add 100 mapped questions (29 Course 1, 71 Intermediate 4). Total 118 adaptations; 5,307 source previews remain unintegrated. See [specification](change-specs/v0.5.0-structured-math.md). Exact pinned Engine modules include per-file hashes. Historical states follow.
