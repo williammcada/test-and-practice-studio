@@ -1,3 +1,7 @@
+# Current candidate — v0.5.0-rc.1
+
+Shared exact arithmetic and MathML add 100 mapped questions (29 Course 1, 71 Intermediate 4). Total 118 adaptations; 5,307 source previews remain unintegrated. See [specification](change-specs/v0.5.0-structured-math.md). Exact pinned Engine modules include per-file hashes. Historical states follow.
+
 # Current candidate — v0.4.1-rc.1
 
 Eighteen source question entries support new number variants, including thirteen in 8/7. English-only catalog remains 5,425; 5,407 remain source previews. See [scope](change-specs/v0.4.1-early-87-expansion.md). Historical entries below record earlier states.

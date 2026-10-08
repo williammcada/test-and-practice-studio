@@ -25,5 +25,7 @@ for entry in catalog['banks']:
  result['banks'].append({'id':d['id'],'display':names[d['course_id']]+' · '+('English' if d['language']=='en' else 'Spanish'),'lessons':newlessons,'items':newitems})
 assert sum(len(b['items']) for b in result['banks'])==5425
 packed=base64.b64encode(gzip.compress(json.dumps(result,ensure_ascii=False,separators=(',',':')).encode(),mtime=0)).decode();html=(root/'src/index.template.html').read_text()
+for f,h in pin['files'].items():assert hashlib.sha256((root/'vendor'/f).read_bytes()).hexdigest()==h
+html=html.replace('/*ENGINE*/','\n'.join((root/'vendor'/f).read_text() for f in pin['files']))
 for token,path in [('/*STYLES*/','studio.css'),('/*CORE*/','core.js'),('/*APP*/','app.js'),('/*ENGINE*/','../vendor/course-banks.js')]:html=html.replace(token,(root/'src'/path).read_text())
 html=html.replace('/*CATALOG*/',packed).replace('/*VERSION*/',version);assert ('<title>Test and Practice Studio v'+version) in html;assert ('class="version">v'+version) in html;(root/'index.html').write_text(html);delivery=root/'downloads'/('Test-and-Practice-Studio-v'+version+'.html');delivery.parent.mkdir(exist_ok=True);assert not delivery.exists() or delivery.read_bytes()==html.encode(), 'Changed HTML must use a new version';delivery.write_text(html);print('Built index.html:',len(html.encode()),'bytes; 5,425 items')

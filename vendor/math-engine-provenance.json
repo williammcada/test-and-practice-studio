@@ -1,7 +1,13 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "55b705f505c96421735751db9c0913da182f46f8",
+  "commit": "74f1aa02fee03cee689f998f9c059d23b6fa03cb",
   "path": "src/course-banks.js",
-  "sha256": "89580d1528b18380340931e558150a1602403b3834cd94495c05b2082bd0f7aa",
-  "moduleVersion": "0.3.1-rc.1"
+  "sha256": "5fd0bad23bf2e71ade614af55237a5e60d6fc3586181976d142481bcb6ee4938",
+  "moduleVersion": "0.4.0-rc.1",
+  "files": {
+    "structured-math.js": "d76fd5628809712def7cf69d6be6794d0778e78f5fb49d775f91114d1236e245",
+    "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
+    "structured-bank.js": "075320d71981a3e7ed9f167a4c2bfc466deb6f015b04bbe585f16e2ff5d47f63",
+    "course-banks.js": "5fd0bad23bf2e71ade614af55237a5e60d6fc3586181976d142481bcb6ee4938"
+  }
 }
