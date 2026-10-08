@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "ce760d23e61f0688334193eccf1e31f9ee8a7014",
+  "commit": "c2452cea6d07d2ec75f26f25d19581bd500e36d2",
   "path": "src/course-banks.js",
-  "sha256": "be3fa796e6cce2cb063a189175cbd64365168c8ffeb50728e3d9d53f68edf94c",
-  "moduleVersion": "0.7.0-rc.1",
+  "sha256": "e7cecd8adaa6c9d003d1af8b292a679289cb7b8556aea707a4c2dcf32ef9cd8a",
+  "moduleVersion": "0.8.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -15,6 +15,8 @@
     "quadratic-bank.js": "6f0e85138f7c98888bbbc428f9166871a9849070dd24b73f57f8a25c1b10ac2d",
     "domain-bank-map.js": "02a9c8b3738b69335304318216ca35f008d679e398b442f3cc3e3ada010c269e",
     "domain-bank.js": "0db728cb2c45f8f847893142060598a6d2be7ecb1281c7a1fd2ff61573b42467",
-    "course-banks.js": "be3fa796e6cce2cb063a189175cbd64365168c8ffeb50728e3d9d53f68edf94c"
+    "proportional-bank-map.js": "88d6ac100f072a49d644a03f7af01f0ed0b81ea9f4bdc360e6324a54e2472af6",
+    "proportional-bank.js": "3b28cad704a847580d000161bcf17f869af9f5cd51df8433f0968786846dfd98",
+    "course-banks.js": "e7cecd8adaa6c9d003d1af8b292a679289cb7b8556aea707a4c2dcf32ef9cd8a"
   }
 }
