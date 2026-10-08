@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "06c2b8b97eea4488652b92973d86286350ca970a",
+  "commit": "ef21f8e9a783625b0d67a2fe475b267148056e32",
   "path": "src/course-banks.js",
-  "sha256": "fd8f69ed25b4c161a46b605ba146b3b16d988f5e868afe0fbd2b9537a3917ead",
-  "moduleVersion": "0.11.0-rc.3",
+  "sha256": "ef7f58bbcc611788a862d5c99669768fc2455690938cdea50ac2bea1af3c5a37",
+  "moduleVersion": "0.12.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -24,6 +24,9 @@
     "geometry-svg.js": "e6684a63b53d8e7e39b810664b1357eb54d36ac79e2c83f106432f1f9efd9fd4",
     "geometry-bank-map.js": "ed8a8980a8b0bb2f9d06fa5c72d9ceaeff7a960033678a43f37b277ae65c48b5",
     "geometry-bank.js": "5a22a190f7400f315447a36231ce93111460a4f2af06d2bd102d14966cac2646",
-    "course-banks.js": "fd8f69ed25b4c161a46b605ba146b3b16d988f5e868afe0fbd2b9537a3917ead"
+    "graph-svg.js": "b30e40b18da7378caa32b0a9c1019284e024dc2c74b39b85bf393f877dd9ce73",
+    "breadth-bank-map.js": "9aaf2cae4d8daa59eacbec83cb36dd827a89d83ec2be6ea035e4527d8b112329",
+    "breadth-bank.js": "84667a6663699361c2b858c75d3f1ce55719594b20cf064b25db6abcbe65a7f0",
+    "course-banks.js": "ef7f58bbcc611788a862d5c99669768fc2455690938cdea50ac2bea1af3c5a37"
   }
 }
