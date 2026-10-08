@@ -1,3 +1,7 @@
+# Manual bank browser — v0.3.0-rc.1 implementation checkpoint
+
+Runnable standalone index.html now supports all eight course/language banks, lesson/search filters, individual and lesson selection, ordered drafts, JSON draft save/open, group removal/clear/undo, and local recovered-content inspection. See [change specification](change-specs/v0.3-manual-bank-review.md). Source previews explicitly remain incomplete; no print-ready question, variant generator or Word/PDF export is claimed. No browser/cloud persistence or deployment. Download drafts before closing. Handbook refreshed to 8fc5e3b6cd163278dd618081333f2264bf392db6.
+
 # Bank content recovery — v0.2 implementation checkpoint
 
 Recovered bounded source content for all 8,166 indexed records and structurally resolved all 5,482 ExamView question-to-lesson links. See [recovery scope and remaining limits](../data/recovery/v0.2/README.md) and [specification](change-specs/v0.2-bank-content-recovery.md). Source answer associations and raw rich objects are preserved; portable equation/diagram rendering, source generator behavior and 837 generator choice-only key conventions remain unverified. Step 2 is not yet fully complete. No question is promoted to verified-for-use by extraction alone.

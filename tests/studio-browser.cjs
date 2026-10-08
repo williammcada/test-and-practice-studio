@@ -1,0 +1,36 @@
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+(async()=>{
+ const root=path.resolve(__dirname,'..'),content=path.resolve(process.env.RECOVERY_CONTENT||'../recovery-v0.2/content');
+ const browser=await chromium.launch({executablePath:process.env.CHROMIUM_EXECUTABLE_PATH,headless:true,args:['--no-sandbox']});const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('file://'+path.join(root,'index.html'));await page.waitForFunction(()=>document.querySelector('#bank').options.length===8);assert.match(await page.locator('#status').innerText(),/8,166/);
+ // Every bank can contribute an item without any standards or content import.
+ const bankIds=await page.locator('#bank option').evaluateAll(os=>os.map(o=>o.value));
+ for(const id of bankIds){await page.selectOption('#bank',id);await page.locator('#questions input').first().check();}
+ assert.equal(await page.locator('#draft-count').innerText(),'8');
+ await page.selectOption('#bank','algebra-2-en');await page.selectOption('#lesson','algebra-2-en:scope:128');assert.match(await page.locator('#questions').innerText(),/No questions/);assert.equal(await page.locator('#add-lesson').isDisabled(),true);
+ // Confirm/cancel group removal and undo preserve other banks.
+ page.once('dialog',d=>d.dismiss());await page.click('#clear-bank');assert.equal(await page.locator('#draft-count').innerText(),'8');
+ page.once('dialog',d=>d.accept());await page.click('#clear-bank');assert.equal(await page.locator('#draft-count').innerText(),'7');await page.click('#undo');assert.equal(await page.locator('#draft-count').innerText(),'8');
+ // Private content loaded only from exact pinned files, all eight in one transaction.
+ await page.setInputFiles('#content-files',bankIds.map(id=>path.join(content,id+'.json')));await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('Loaded 8 bank'));
+ await page.selectOption('#bank','course-1-en');await page.fill('#search','C1_S01_00085');await page.locator('#questions button').first().click();assert.match(await page.locator('#preview').innerText(),/4w = 320/);assert.match(await page.locator('#preview').innerText(),/Incomplete source preview/);assert.equal(await page.locator('.teacher-key').getAttribute('open'),null);await page.locator('.teacher-key summary').click();assert.match(await page.locator('.teacher-key').innerText(),/Source key: C/);
+ await page.fill('#search','C1_S01_00086');await page.locator('#questions button').first().click();assert.equal(await page.locator('.teacher-key').getAttribute('open'),null);
+ await page.fill('#search','C1_S01_00087');await page.locator('#questions button').first().click();assert.match(await page.locator('#preview').innerText(),/equation or diagram not rendered/);
+ // Existing selection remains through search, pagination and course/language changes.
+ await page.fill('#search','');await page.click('#next');assert.match(await page.locator('#page-label').innerText(),/Page 2/);await page.selectOption('#bank','course-1-es');assert.equal(await page.locator('#draft-count').innerText(),'8');
+ // Draft ordering and file roundtrip.
+ const first=await page.locator('#draft li').first().innerText();await page.locator('#draft li').nth(1).getByRole('button',{name:/Move .* up/}).click();assert.notEqual(await page.locator('#draft li').first().innerText(),first);
+ await page.fill('#draft-title','Mixed course review');await page.locator('#draft-title').blur();await page.selectOption('#purpose','test');
+ const dlPromise=page.waitForEvent('download');await page.click('#download');const dl=await dlPromise;const saved=path.join(root,'artifacts/test-draft.json');await dl.saveAs(saved);const draft=JSON.parse(fs.readFileSync(saved));assert.equal(draft.itemIds.length,8);assert.equal(draft.title,'Mixed course review');assert.equal(draft.purpose,'test');assert.ok(!('answers' in draft));
+ page.once('dialog',d=>d.dismiss());await page.click('#clear');assert.equal(await page.locator('#draft-count').innerText(),'8');page.once('dialog',d=>d.accept());await page.click('#clear');assert.equal(await page.locator('#draft-count').innerText(),'0');await page.setInputFiles('#draft-file',saved);await page.waitForFunction(()=>document.querySelector('#draft-count').textContent==='8');assert.equal(await page.locator('#draft-count').innerText(),'8');
+ // Unknown IDs and modified content cannot replace valid work.
+ const bad=path.join(root,'artifacts/bad-draft.json');fs.writeFileSync(bad,JSON.stringify({...draft,itemIds:['unknown']}));await page.setInputFiles('#draft-file',bad);await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('unknown'));assert.match(await page.locator('#status').innerText(),/unknown/);assert.equal(await page.locator('#draft-count').innerText(),'8');
+ const altered=path.join(root,'artifacts/altered-content.json');fs.writeFileSync(altered,'{"id":"course-1-en","items":[]}');await page.setInputFiles('#content-files',[path.join(content,'course-1-en.json'),altered]);await page.waitForFunction(()=>document.querySelector('#status').classList.contains('error'));assert.match(await page.locator('#status').innerText(),/does not match/);assert.equal(await page.locator('#draft-count').innerText(),'8');
+ await page.selectOption('#bank','algebra-1-en');await page.selectOption('#lesson','algebra-1-en:scope:1');const before=Number(await page.locator('#draft-count').innerText());await page.click('#add-lesson');const added=Number(await page.locator('#draft-count').innerText());assert.ok(added>before);await page.click('#add-lesson');assert.equal(Number(await page.locator('#draft-count').innerText()),added);await page.locator('#questions button').first().click();assert.match(await page.locator('#preview').innerText(),/Dynamic template/);
+ await page.screenshot({path:path.join(root,'artifacts/studio-desktop.png'),fullPage:true});
+ await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:path.join(root,'artifacts/studio-narrow.png'),fullPage:true});
+ await page.emulateMedia({media:'print'});assert.equal(await page.locator('.print-warning').isVisible(),true);assert.equal(await page.locator('main').isVisible(),false);await page.emulateMedia({media:'screen'});
+ page.once('dialog',d=>d.accept());await page.click('#forget-content');assert.equal(await page.locator('#draft-count').innerText(),String(added));assert.match(await page.locator('#preview').innerText(),/not loaded/);
+ assert.deepEqual(errors,[]);console.log(JSON.stringify({result:'passed',browser:browser.version(),banks:8,tests:'cross-course selection, empty lesson, content import, previews, key isolation, pagination, draft order/roundtrip, invalid imports, group deletion/undo, lesson deduplication, print isolation, narrow layout',limits:'Desktop Chromium and narrow emulation; physical devices and hosted delivery not tested'}));await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

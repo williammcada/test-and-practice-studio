@@ -1,0 +1,1 @@
+{"name":"test-and-practice-studio","version":"0.3.0-rc.1","private":true,"scripts":{"build":"python3 scripts/build-studio.py","test":"node tests/studio-core.cjs","test:browser":"node tests/studio-browser.cjs"},"description":"Manual course-bank selection and source review; content verification remains in progress"}
