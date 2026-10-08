@@ -2,7 +2,7 @@
 (function(root){'use strict';
 const E=typeof module!=='undefined'&&module.exports?require('../vendor/course-banks'):root.MathEngineBanks;
 const known=new Map(E.catalog.map(x=>[x.sourceId,x])),clone=x=>JSON.parse(JSON.stringify(x));
-const defaults={title:'Introduction to PreAlgebra practice',header:'',instructions:'Show your work. Write each answer clearly.',footer:'',paper:'A4',columns:1,space:30,dividers:false,count:2,cap:40,seed:'practice',purpose:'practice'};
+const defaults={title:'Mathematics practice',header:'',instructions:'Show your work. Write each answer clearly.',footer:'',paper:'A4',columns:1,space:30,dividers:false,count:2,cap:40,seed:'practice',purpose:'practice'};
 function str(v,max,label){if(typeof v!=='string'||v.length>max||/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(v))throw Error('Invalid '+label+'.');return v;}
 function settings(value={}){const s={...defaults,...value};for(const [k,max]of Object.entries({title:120,header:160,instructions:500,footer:160,seed:200}))str(s[k],max,k);if(!s.title.trim()||!s.seed.trim())throw Error('Title and seed are required.');for(const [k,min,max]of [['columns',1,2],['space',0,80],['count',1,10],['cap',1,100]])if(!Number.isInteger(s[k])||s[k]<min||s[k]>max)throw Error('Invalid '+k+'.');if(!['A4','Letter'].includes(s.paper)||!['test','practice'].includes(s.purpose)||typeof s.dividers!=='boolean')throw Error('Invalid packet options.');return s;}
 function cellValue(c){if(c&&typeof c==='object'&&'v'in c)return c.v;return c;}
@@ -24,7 +24,7 @@ function importRows(rows,scale='proportion'){
 function csv(text){if(typeof text!=='string'||text.length>5000000)throw Error('CSV is too large.');const rows=[];let row=[],value='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){value+='"';i++;}else if(!value||quoted)quoted=!quoted;else throw Error('Malformed CSV quote.');}else if(c===','&&!quoted){row.push(value);value='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(value);rows.push(row);row=[];value='';}else value+=c;}if(quoted)throw Error('Unclosed CSV quote.');if(value||row.length){row.push(value);rows.push(row);}return rows;}
 function allocate(data,opt){const threshold=Number(opt.threshold);if(!Number.isFinite(threshold)||threshold<0||threshold>100)throw Error('Threshold must be between 0 and 100.');const s=settings(opt.settings),selected=new Set(opt.students),included=new Set(opt.standards),plans=[];
  for(const learner of data.students.filter(s=>selected.has(s.key))){const items=[];for(const col of data.columns){if(!col.sourceId||!included.has(col.raw))continue;const v=learner.scores[col.raw];if(v.state==='score'?v.value<threshold:opt.includeMissing){for(let n=0;n<s.count;n++)items.push({sourceId:col.sourceId,index:n,standard:col.standard,importedCode:col.raw,evidence:clone(v)});}}
- plans.push({name:learner.name,key:learner.key,items:items.slice(0,s.cap),omitted:Math.max(0,items.length-s.cap)});}
+ plans.push({name:learner.name,key:learner.key,items:items.slice(0,s.cap),omitted:Math.max(0,items.length-s.cap),omittedItems:items.slice(s.cap)});}
  return plans;
 }
 function freeze(x){if(x&&typeof x==='object'){Object.values(x).forEach(freeze);Object.freeze(x);}return x;}

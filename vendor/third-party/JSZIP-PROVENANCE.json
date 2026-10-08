@@ -1,0 +1,9 @@
+{
+  "name": "JSZip",
+  "version": "3.10.1",
+  "source": "https://github.com/Stuk/jszip/releases/tag/v3.10.1",
+  "copiedFrom": "Codex primary runtime bundled jszip/dist/jszip.min.js",
+  "license": "MIT OR GPL-3.0-or-later; used under MIT",
+  "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+  "purpose": "Offline XLSX ZIP parsing and DOCX packaging"
+}
