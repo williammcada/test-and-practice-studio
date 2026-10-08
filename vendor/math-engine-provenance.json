@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "a84a978ad46dfc8b1039ac0ab5fc28e84f30bf09",
+  "commit": "de4a89a89c1355d8abf0b7b702c1921693ab753d",
   "path": "src/course-banks.js",
-  "sha256": "ae95637b5969cf57d5be2c360bffbcde7d6c4526502a16c18632b72a7ca5ca63",
-  "moduleVersion": "0.21.0-rc.1",
+  "sha256": "7e0d7b7d1d2f31402e2174058fe91438c7cc7a66749d6cb86bbef14ee3d8ed32",
+  "moduleVersion": "0.21.0-rc.2",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -52,10 +52,10 @@
     "curriculum87-investigations.js": "24f2a1256ecd641a302b9eae9719fde15321b2b6ffafee8460998d23e78b55ee",
     "curriculum87-extra.js": "274306c2d145438ca5a61a5584857ffb9e35f6628940450423097ea1460cc1cc",
     "curriculum87-map.js": "b80506d7022659c0e02c2d877e65b50c062de50b62e0b60116d99eb8417a7690",
-    "curriculum87-phase2.js": "447a52718bc928bbb5f71a834d523440d443f18ae851229a1a63b33017ecc4d9",
+    "curriculum87-phase2.js": "92164f149985673fc16c9098f9df0fb8fb734dada601061754f73e58ce1e7195",
     "curriculum87.js": "124e4eb11ea6d107a4e98cf812d46119386a461e348fd503895623ca0a5cebc2",
-    "curriculum87-assessment-map.js": "65b700fae769d273a7c71e447ddd4087e3954218c46bc8e133b1f97e8a08de52",
+    "curriculum87-assessment-map.js": "e74379e486e4b8a5ee774e886f2ad65a467a0ef2f9a962d07b28fdf7ed29645f",
     "curriculum87-assessment.js": "8a1b4410d93a939612534549a4f7af1dde6dd086955aef2d907ed2dc7b211203",
-    "course-banks.js": "ae95637b5969cf57d5be2c360bffbcde7d6c4526502a16c18632b72a7ca5ca63"
+    "course-banks.js": "7e0d7b7d1d2f31402e2174058fe91438c7cc7a66749d6cb86bbef14ee3d8ed32"
   }
 }
