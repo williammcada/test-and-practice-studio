@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "3858c7210808abbddd8c9ee42881460ca4fbafdf",
+  "commit": "219d13b547d5c40c8594565306ee102e38908408",
   "path": "src/course-banks.js",
-  "sha256": "f53c52fabe77ccd1f398112b8b4a786667f90e67d6a599e4fec7fb85004ce46e",
-  "moduleVersion": "0.19.0-rc.1",
+  "sha256": "0b59e647fe188abff3551e1a3df0b9f85c4ed2fe5a3fc46d8b9cb1519e2b45fe",
+  "moduleVersion": "0.19.0-rc.2",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -44,7 +44,7 @@
     "algebra-review-bank-map.js": "2074fe4863fefc7b9f6fa60ed4bceb39f200c072a7a208b0c7c2ac470eb8c246",
     "algebra-review-bank.js": "c6a563b9727049c5c94f44d37cd1d8f76c486c36547db6fa838f21297dc02851",
     "foundations87-map.js": "7920a7dcd322dbc687381fe23aa7e779fb96c09008bf51983dbf7861eabcb8e5",
-    "foundations87.js": "50694334bea4f90a0cd1abb2ba1d802b744e92ef0544488f5060ba69ab50e96f",
-    "course-banks.js": "f53c52fabe77ccd1f398112b8b4a786667f90e67d6a599e4fec7fb85004ce46e"
+    "foundations87.js": "32d5002f6384dee18b314727c090e48dbebf1c7ac3cfcaa8a43286eb8cd68819",
+    "course-banks.js": "0b59e647fe188abff3551e1a3df0b9f85c4ed2fe5a3fc46d8b9cb1519e2b45fe"
   }
 }
