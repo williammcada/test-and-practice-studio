@@ -1,0 +1,3 @@
+# Full-bank inventory — step 1
+
+Canonical [inventory and renderer work queue](https://github.com/williammcada/MATH-ENGINE/tree/314882a1e7d4642b4bfb82231d89e29726acb35d/curriculum/course-inventory/v0.1) covers all 5,425 English records. This is a provisional classification, not new usable question content. See Engine verification record for integrity checks. 18 source-informed adaptations remain implemented; 5,407 remain source previews. Studio HTML stays v0.4.1-rc.1 because no HTML was modified. Next step: semantically review candidate groups and implement shared generation/rendering support, retaining a per-record exception queue.
