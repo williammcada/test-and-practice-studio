@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "9df0a67cf859fc273d5e064e2de70e464c6af08e",
+  "commit": "51cb34e60d9f70c4a5d9aafeaebc387414bca89b",
   "path": "src/course-banks.js",
-  "sha256": "4a7f3b1f193e414ca529fdf3b70f97024f3cce5d847dab1124093021f516b236",
-  "moduleVersion": "0.12.0-rc.3",
+  "sha256": "1888166c11c3a2a050abe1179285ff98612a3d0028ce1994d47ffe7ad792df77",
+  "moduleVersion": "0.13.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -21,12 +21,14 @@
     "measurement-bank.js": "723755626a5647e5d431b588cbd3cf46c28a6d769535f216a7fb2ee6bae7c601",
     "statistics-bank-map.js": "253d6af26f250450650e2d7c864c45d237c9bfe906b295b99bb348ba2bab5208",
     "statistics-bank.js": "0084a5df0fcadf1793304874b46e645ec07e206a52ff636f2cf2a388c9a39dbd",
-    "geometry-svg.js": "e6684a63b53d8e7e39b810664b1357eb54d36ac79e2c83f106432f1f9efd9fd4",
+    "geometry-svg.js": "5852b91996d4a30b862a032ae38dc31c67b1a3a00daed8eb4bef7f476585baf5",
     "geometry-bank-map.js": "ed8a8980a8b0bb2f9d06fa5c72d9ceaeff7a960033678a43f37b277ae65c48b5",
     "geometry-bank.js": "5a22a190f7400f315447a36231ce93111460a4f2af06d2bd102d14966cac2646",
-    "graph-svg.js": "cb6728c98d39234db640a7e508d227b245b7be326ef89742cdc897c48c594c0f",
+    "graph-svg.js": "02d5c8333c647d93d954ef84bcfdd37e51bdfe1598ab63ba283292066cb58490",
     "breadth-bank-map.js": "9aaf2cae4d8daa59eacbec83cb36dd827a89d83ec2be6ea035e4527d8b112329",
     "breadth-bank.js": "0c81fea27cf5cc020bc99ddcc7a05b6e065083b8c4357b243bf75a6793adbba5",
-    "course-banks.js": "4a7f3b1f193e414ca529fdf3b70f97024f3cce5d847dab1124093021f516b236"
+    "advanced-bank-map.js": "b0c440f2db50f7a716674e6dbf90bd1d02e36c2f31e746a340d8200951fa3abf",
+    "advanced-bank.js": "1d01f1388a710254108df9f3a958168d0a0734e192ca4c6821afe727e09372d2",
+    "course-banks.js": "1888166c11c3a2a050abe1179285ff98612a3d0028ce1994d47ffe7ad792df77"
   }
 }
