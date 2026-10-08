@@ -1,3 +1,7 @@
+# Bank content recovery — v0.2 implementation checkpoint
+
+Recovered bounded source content for all 8,166 indexed records and structurally resolved all 5,482 ExamView question-to-lesson links. See [recovery scope and remaining limits](../data/recovery/v0.2/README.md) and [specification](change-specs/v0.2-bank-content-recovery.md). Source answer associations and raw rich objects are preserved; portable equation/diagram rendering, source generator behavior and 837 generator choice-only key conventions remain unverified. Step 2 is not yet fully complete. No question is promoted to verified-for-use by extraction alone.
+
 # Course bank metadata — v0.1 implementation checkpoint
 
 Step 1 imports six courses / eight language banks with 8,166 question records. See [catalog](../data/course-banks/v0.1/README.md) and [change specification](change-specs/v0.1-course-index-import.md). This is metadata only; question recovery, selection UI and exports remain pending. Handbook refreshed to 14ab24e3e55928a5d37e567283f0edb9172a2ce6 (AI-START-HERE, UNIVERSAL-RULES and CONDITIONAL-STANDARDS); applicable scope recorded in the specification.
