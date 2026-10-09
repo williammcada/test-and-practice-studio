@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "78ac654252c808f825c1ca60409f0be215420674",
+  "commit": "a1484d714bba3790a8c228fc69b9ae7174135068",
   "path": "src/course-banks.js",
-  "sha256": "c7f1577c23a09e5867bcba23b75ab86ff587635f945e2b9d9275fd7c341af4c6",
-  "moduleVersion": "0.32.0-rc.2",
+  "sha256": "db6d5dba6f155e97ef1f1ef2abf1859adeedb40111e6bb2a638879c5005f8864",
+  "moduleVersion": "0.33.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -69,6 +69,8 @@
     "cross-course-tasks.js": "293fb4bd92266cd21691eb92450c2868b1a8e96edc6434ec88bafc380c40103c",
     "cross-course-map.js": "08f0373c9ab0681c2f8ef3baaaf520d0eb46b25d929381ea29b2a17ec1b05545",
     "cross-course.js": "9bacaabfb83871969c7ba51aa7194475354a769d700a5a820802549748f4b37e",
-    "course-banks.js": "c7f1577c23a09e5867bcba23b75ab86ff587635f945e2b9d9275fd7c341af4c6"
+    "related-concepts-map.js": "fccf54e2431983de2ad43a35a7de0fb5ada82bc25b97624f9bc0cf1825473709",
+    "related-concepts.js": "b0726f243f5911bc86f36ea8f6f0fd7fd53dfff87a83e1379a0706d471d3fd90",
+    "course-banks.js": "db6d5dba6f155e97ef1f1ef2abf1859adeedb40111e6bb2a638879c5005f8864"
   }
 }
