@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "fd4c0e9d1466ecf7eec65284c243754768521d62",
+  "commit": "3689414a2a25f965bd1660641d6934ab6658b77b",
   "path": "src/course-banks.js",
-  "sha256": "71d5d1dda1272a746dad3a5fc5827696deb0e7c5c27c6d50a5881ff9e0b9185c",
-  "moduleVersion": "0.24.0-rc.2",
+  "sha256": "52b77a9c6773d7131dc13a444fdb68c020e20bacb7e6d5d10697fe9023ba0d63",
+  "moduleVersion": "0.24.0-rc.3",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -61,7 +61,7 @@
     "algebra-half-map.js": "654a7719c75f079c294b3bd7a6231fd4ea01b1f8a06cf15d99f7714daecc0e15",
     "algebra-half.js": "0c7e31dfa7de5b401b0ed16f14b1b9e724d6c0b7e2692319c94811bff57bbd2e",
     "algebra-one-map.js": "808e5b7b34af7c80ef70c2a889933fde37d797082a0d4c3a64dfbf65a8f50310",
-    "algebra-one.js": "f86ee35bbb201227d790f0b537267d09560fe92516bb7be4bc702e14c3dfa18e",
-    "course-banks.js": "71d5d1dda1272a746dad3a5fc5827696deb0e7c5c27c6d50a5881ff9e0b9185c"
+    "algebra-one.js": "37368d7711151215ba7a86331dd95c3a11a282367d4a816d4be84f2c4647291b",
+    "course-banks.js": "52b77a9c6773d7131dc13a444fdb68c020e20bacb7e6d5d10697fe9023ba0d63"
   }
 }
