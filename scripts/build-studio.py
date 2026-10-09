@@ -1,6 +1,8 @@
 """Deterministically bundle the metadata review UI; no publisher question bodies."""
 import pathlib,json,hashlib,gzip,base64,subprocess
 root=pathlib.Path(__file__).resolve().parents[1];pin=json.loads((root/'vendor/math-engine-provenance.json').read_text());assert hashlib.sha256((root/'vendor/course-banks.js').read_bytes()).hexdigest()==pin['sha256'];base=root/'data/course-banks/v0.1';catalog=json.loads((base/'catalog.json').read_text());version=json.loads((root/'package.json').read_text())['version'];assert ("VERSION='"+version+"'") in (root/'src/core.js').read_text();result={'version':version,'catalog':'course-index-0.1+recovery-0.2','banks':[],'contentHashes':json.loads((root/'data/recovery/v0.2/content-hashes.json').read_text())}
+placements=json.loads(subprocess.check_output(['node','-e',"console.log(JSON.stringify(require('./vendor/cross-course').coursePlacement))"],cwd=root))
+placements={p['bankId']:p for p in placements}
 for entry in catalog['banks']:
  assert entry['language']=='en'
  p=base/entry['path'];assert hashlib.sha256(p.read_bytes()).hexdigest()==entry['sha256'];d=json.loads(p.read_text());lessons={l['id']:dict(l) for l in d['lessons']};items={i['id']:dict(i) for i in d['items']};overlay=root/'data/recovery/v0.2'/(d['id']+'-links.json')
@@ -22,7 +24,8 @@ for entry in catalog['banks']:
  # Natural label order, retaining bank-scoped duplicate lesson labels.
  import re
  newlessons.sort(key=lambda l:[int(x) if x.isdigit() else x.lower() for x in re.split(r'(\d+)',l['display'])])
- result['banks'].append({'id':d['id'],'display':names[d['course_id']]+' · '+('English' if d['language']=='en' else 'Spanish'),'lessons':newlessons,'items':newitems})
+ placement=placements[d['id']];label='Grade '+str(placement['localGrade']) if placement['placement']=='grade-assigned' else 'Tracked · not grade-locked'
+ result['banks'].append({'id':d['id'],'display':names[d['course_id']]+' · '+label+' · English','localGrade':placement['localGrade'],'placement':placement['placement'],'lessons':newlessons,'items':newitems})
 assert sum(len(b['items']) for b in result['banks'])==5425
 result['legacyRecordCount']=5425
 authored=json.loads(subprocess.check_output(['node','-e',"const E=require('./vendor/course-banks');console.log(JSON.stringify(E.catalog.filter(c=>c.origin==='original-curriculum-task')))"],cwd=root))
