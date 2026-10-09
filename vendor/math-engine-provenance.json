@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "de4a89a89c1355d8abf0b7b702c1921693ab753d",
+  "commit": "13b014c32e313d8afafb3f9486d863d77f180598",
   "path": "src/course-banks.js",
-  "sha256": "7e0d7b7d1d2f31402e2174058fe91438c7cc7a66749d6cb86bbef14ee3d8ed32",
-  "moduleVersion": "0.21.0-rc.2",
+  "sha256": "3e614a515260cfdb569c96a2ea73ebb4c942d6d014984b88152834cc0406880c",
+  "moduleVersion": "0.22.0-rc.2",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -56,6 +56,8 @@
     "curriculum87.js": "124e4eb11ea6d107a4e98cf812d46119386a461e348fd503895623ca0a5cebc2",
     "curriculum87-assessment-map.js": "e74379e486e4b8a5ee774e886f2ad65a467a0ef2f9a962d07b28fdf7ed29645f",
     "curriculum87-assessment.js": "8a1b4410d93a939612534549a4f7af1dde6dd086955aef2d907ed2dc7b211203",
-    "course-banks.js": "7e0d7b7d1d2f31402e2174058fe91438c7cc7a66749d6cb86bbef14ee3d8ed32"
+    "foundational-courses-map.js": "3dd742207efb99b697ed0e0fb1e171ee4a75191c24856af4e77b66a579040145",
+    "foundational-courses.js": "130992c408c5917ee9516ca4e37dd2ab05e67a4d990eea17670e2ef4747b651b",
+    "course-banks.js": "3e614a515260cfdb569c96a2ea73ebb4c942d6d014984b88152834cc0406880c"
   }
 }

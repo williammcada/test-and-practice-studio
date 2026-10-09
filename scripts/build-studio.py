@@ -27,8 +27,8 @@ assert sum(len(b['items']) for b in result['banks'])==5425
 result['legacyRecordCount']=5425
 authored=json.loads(subprocess.check_output(['node','-e',"const E=require('./vendor/course-banks');console.log(JSON.stringify(E.catalog.filter(c=>c.origin==='original-curriculum-task')))"],cwd=root))
 for c in authored:
- b=next(b for b in result['banks'] if b['id']=='course-87-en')
- assert c['sourceId'].startswith('course-87-en:authored:') and all(i['id']!=c['sourceId'] for i in b['items'])
+ b=next(b for b in result['banks'] if b['id']==c['sourceId'].split(':authored:')[0])
+ assert ':authored:' in c['sourceId'] and all(i['id']!=c['sourceId'] for i in b['items'])
  lesson=next(l for l in b['lessons'] if l['id']==c['lessonId'])
  b['items'].append({'id':c['sourceId'],'sourceId':c['sourceLabel'],'bankId':b['id'],'lessonId':c['lessonId'],'title':c['title'],'origin':c['origin'],'standard':c['standard'],'alias':c['alias']})
  lesson['count']+=1
