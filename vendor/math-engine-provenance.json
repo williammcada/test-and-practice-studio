@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "b69e4d79fe52319be364913d18d295bc253c1edc",
+  "commit": "8ce9434493c69c76ce5e8609efebe4e6d53e5a46",
   "path": "src/course-banks.js",
-  "sha256": "d0ff20a39938bfc42a59252de9d4c5ef7d79185ad508ac7f0673f40737129ede",
-  "moduleVersion": "0.26.0-rc.1",
+  "sha256": "5fea702ebbe793325b5b25f14e203f56856df157b4a723ed6c572d5b6f7a23e4",
+  "moduleVersion": "0.26.0-rc.2",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -65,7 +65,7 @@
     "algebra-two-map.js": "e6f9354aa74bc1972f6b577a990b91b4451e359fdcd0c31d6e86d4d25f9dbed8",
     "algebra-two.js": "02d2973b969b5dcf66c008b8897d354a997230b9b92feef94e238a0e5cd6325b",
     "algebra-two-completion-map.js": "951c89a77f649877a4a3a52685f75bc82a83cc17aa51bf92d30fb820020ae5b7",
-    "algebra-two-completion.js": "f20e1949f47a4de4366094cea513f2baccd113c851c9415e26ca53b3ee3bb80b",
-    "course-banks.js": "d0ff20a39938bfc42a59252de9d4c5ef7d79185ad508ac7f0673f40737129ede"
+    "algebra-two-completion.js": "d3bec3d0a4617720665ea6faf8d61942e9a1e7d66670ee1058ed7a616a4015e8",
+    "course-banks.js": "5fea702ebbe793325b5b25f14e203f56856df157b4a723ed6c572d5b6f7a23e4"
   }
 }
