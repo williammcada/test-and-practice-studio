@@ -1,9 +1,9 @@
 {
   "repository": "williammcada/MATH-ENGINE",
-  "commit": "9ae5807cb32ecb7ce6d5a099b45645bde3cbd523",
+  "commit": "6b624503c3979537bc814c80ff7e8ddc2d29d5c8",
   "path": "src/course-banks.js",
-  "sha256": "f03ac6b1b8cc1f7133c81d4b35bde16b66953b7dcf73635593f181a87070d78c",
-  "moduleVersion": "0.30.0-rc.1",
+  "sha256": "d521a96b2a70a15359339df194c6f6cb8f5111d635cf90802ddcfb7682a96de4",
+  "moduleVersion": "0.31.0-rc.1",
   "files": {
     "structured-math.js": "8dc0870dbc5f9f7fc93db454d8bd8d22f8fa13dfeeff13a71d4592692bc16087",
     "structured-bank-map.js": "7bd11d38a3d9e16b288c19dc3125899a4c53ca7a5199f6ab8295aa7d3f0fccf4",
@@ -67,8 +67,8 @@
     "algebra-two-completion-map.js": "951c89a77f649877a4a3a52685f75bc82a83cc17aa51bf92d30fb820020ae5b7",
     "algebra-two-completion.js": "d3bec3d0a4617720665ea6faf8d61942e9a1e7d66670ee1058ed7a616a4015e8",
     "cross-course-tasks.js": "293fb4bd92266cd21691eb92450c2868b1a8e96edc6434ec88bafc380c40103c",
-    "cross-course-map.js": "dd7e8982db61a4569d1cac6b78aa8ce5ffe27f4b938b36e6f0f66c38526aec40",
+    "cross-course-map.js": "c037b5c51279bfb28f4421fe841ae68a604214f3aed9c8f248ccba87e1eb7598",
     "cross-course.js": "9bacaabfb83871969c7ba51aa7194475354a769d700a5a820802549748f4b37e",
-    "course-banks.js": "f03ac6b1b8cc1f7133c81d4b35bde16b66953b7dcf73635593f181a87070d78c"
+    "course-banks.js": "d521a96b2a70a15359339df194c6f6cb8f5111d635cf90802ddcfb7682a96de4"
   }
 }
